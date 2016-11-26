@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+}
+
+div, a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+:root {
+	--boxWrap: rgba(0, 0, 0, 0.1);
+	--boxContent: rgba(0, 0, 0, 0.3);
+}
+
+/*** CANVAS ***/
+
+#canvas {
+	height: 100vh;
+	box-sizing: border-box;
+	background-size: cover;
+	background-image: url("pic0.jpg");
+	background-position: center;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 15px;
+}
+
+/*** MAGIC LINE ***/
+
+#magicWrap {
+	height: 10px;
+	width: 10px;
+/*	min-width: 50px;*/
+	transition: 0.4s linear;
+	margin: 0 15px 0 15px;
+}
+
+.magicSquare {
+	height: 10px;
+	min-width: 10px;
+	background-color: white;
+}
+
+.magicSquare.left {
+	position: absolute;
+	left: 160px;
+}
+
+#magicLine {
+	height: 2px;
+	width: 100%;
+	background-color: white;
+}
+
+/*** CONTACT ***/
+
+.info {
+	color: white;
+	font: 20px Simplifica;
+	background-color: var(--boxContent);
+	padding: 7px 4px 4px 4px;
+	margin-bottom: 15px;
+	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.info.link {
+	text-decoration: none;
+	text-align: center;
+}
+
+.info.link:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+/*** WRAP ***/
+
+.contentWrap {
+	padding: 15px 15px 0 15px;
+	background-color: var(--boxWrap);
+	top: 0;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.contentWrap.right {
+	padding-right: 23px;
+	opacity: 0;
+	display: block;
+	transition: 0.25s linear;
+	position: fixed;
+	margin: 15px;
+	right: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/*** CONTENTS BOX ***/
+
+.contentsButton {
+	color: white;
+	width: 100px;
+	background-color: var(--boxContent);
+	font: 22px Simplifica;
+	transition: 0.5s;
+	text-align: left;
+	padding: 4px 4px 0px 4px;
+	margin-bottom: 15px;
+}
+
+.contentsButton:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+	padding-left: 6px;
+}
+
+.contentsButton.about {
+	padding-left: 57px;
+}
+
+.contentsButton.work {
+	padding-left: 59px;
+}
+
+.contentsButton.contact {
+	padding-left: 43px;
+}
+
+/*** FONTS ***/
+
+@font-face {
+	font-family: Simplifica;
+	src: url("simplifica.ttf");
+}
+
+@font-face {
+	font-family: Gidole;
+	src: url("gidole.otf");
+}
