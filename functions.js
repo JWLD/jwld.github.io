@@ -25,23 +25,25 @@ $(window).resize(function() {
 })
 
 function openBox(category) {	
-	// if no boxes are open
-	if ($("#magicWrap").css("width") == "10px") {
-		currentBox = $("#box_" + category);
-		currentCat = category;
-		$(currentBox).css("height", "0");
-		moveLine(true);
-	} 
-	// else if there is a box open
-	else {
-		// if user has clicked the same cat as is open, close line
-		if (category == currentCat) {
-			boxExpand(false);
-		} else {
-			changeOfCat = true;
-			newCat = category;
+	if (document.readyState == "complete") {
+		// if no boxes are open
+		if ($("#magicWrap").css("width") == "10px") {
+			currentBox = $("#box_" + category);
 			currentCat = category;
-			boxExpand(false);
+			$(currentBox).css("height", "0");
+			moveLine(true);
+		} 
+		// else if there is a box open
+		else {
+			// if user has clicked the same cat as is open, close line
+			if (category == currentCat) {
+				boxExpand(false);
+			} else {
+				changeOfCat = true;
+				newCat = category;
+				currentCat = category;
+				boxExpand(false);
+			}
 		}
 	}
 }
