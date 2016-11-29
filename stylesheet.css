@@ -56,8 +56,9 @@ button:focus {
 }
 
 .magicSquare.left {
-	position: absolute;
+	position: fixed;
 	left: 160px;
+	top: 15px;
 }
 
 #magicLine {
@@ -82,6 +83,7 @@ button:focus {
 .info.link {
 	text-decoration: none;
 	text-align: center;
+	transition: 0.5s;
 }
 
 .info.link:hover {
@@ -94,6 +96,10 @@ button:focus {
 	height: 200px;
 	padding: 0;
 	border-radius: 100px;
+}
+
+.project {
+	border: 1px solid white;
 }
 
 /*** WRAP ***/
@@ -165,9 +171,8 @@ button:focus {
 /*** BACKGROUND SWITCH ***/
 
 #switchWrap {
-	position: fixed;
 	top: 156px;
-	width: 130px;
+	width: 100%;
 }
 
 .switch {
@@ -182,6 +187,10 @@ button:focus {
 .switch:hover {
 	background-color: var(--boxContent);
 	transition: 0.5s;
+}
+
+#contentAndSwitch {
+	flex-direction: column;
 }
 
 /*** FONTS ***/

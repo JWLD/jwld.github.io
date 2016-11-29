@@ -4,41 +4,43 @@
 	<head>
 		<title>Jack Davies</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="jquery-3.1.1.js"></script>
 		<script src="functions.js" type="text/javascript"></script>
 	</head>
 	<body>
+		<div class="magicSquare left"></div>
 		<div id="canvas">
-			<div class="contentWrap">
-				<button class="contentsButton about" onclick="openBox('about')">ABOUT</button>
-				<button class="contentsButton work" onclick="openBox('work')">WORK</button>
-				<button class="contentsButton contact" onclick="openBox('contact')">CONTACT</button>
+			<div id="contentAndSwitch">
+				<div class="contentWrap">
+					<button class="contentsButton about" onclick="openBox('about')">ABOUT</button>
+					<button class="contentsButton work" onclick="openBox('work')">WORK</button>
+					<button class="contentsButton contact" onclick="openBox('contact')">CONTACT</button>
+				</div>
+				<div id="switchWrap">
+					<button class="switch" onclick="changeBack(0)"></button>
+					<button class="switch" onclick="changeBack(1)"></button>
+				</div>
 			</div>
 			<div id="magicWrap" class="blink">
-				<div class="magicSquare left"></div>
 				<div id="magicLine"></div>
 				<div class="magicSquare"></div>
 			</div>
 			<div class="contentWrap right" id="box_about">
 				<div class="info">I'm an aspiring web developer, currently based in Bristol.</div>
-				<div class="info">After graduating in Classical Civilisation, I stumbled across CS50</br>and have been hooked on coding ever since.</div>
-				<div class="info">I've been making games in Unity for the last year, and have recently</br>become even more hooked on web dev.</div>
+				<div class="info">After graduating in Classical Civilisation, I stumbled</br>across CS50 and discovered a passion for coding.</div>
+				<div class="info">I've been building games in Unity over the last year, but</br>have recently become even more interested in web dev.</div>
 				<div><img class="info pic" src="me.png"></img></div>
 			</div>
 			<div class="contentWrap right" id="box_work">
-				<a class="info link project" href="http://www.completionism.co.uk" target="_blank">COMPLETIONISM</a>
-				<div class="info">Website for tracking collections in WoW.</div>
+				<a class="info link project" href="http://www.completionism.co.uk" target="_blank">COMPLETIONISM.CO.UK</a>
+				<div class="info">Website for tracking collections in the game World of Warcraft. Still a work in progress,</br>but I've received a lot of positive feedback from the community so far, and will be</br>continuing development! Written in PHP and Javascript, and uses the developer's API</br>to import information about players' in-game collections.</br></br>You can try syncing a character by clicking 'Link' and entering the following information:</br>Category - Mounts / Region - EU / Realm - Sylvanas / Character - Giblut</br>Now click the big 'Mounts' button to view the collection.</div>
 				<a class="info link project" href="https://itunes.apple.com/us/app/wormulator/id1108485988?mt=8" target="_blank">WORMULATOR</a>
-				<div class="info">My first foray into game development (iPad only). Very much a</br>practice project - there's a bigger and better game in the works!</br>Built in Unity, with my own custom artwork and music.</div>
+				<div class="info">My first foray into game development (iPad only). Very much a practice project - there's a</br>bigger and better game in the works!</br>Written in C# and built in Unity, with my own artwork and music.</div>
 			</div>
 			<div class="contentWrap right" id="box_contact">
-				<a class="info link" href="mailto:emailaddress@email.com">fakeemailaddress@email.com</a>
+				<a class="info link" href="mailto:fakeemailaddress@email.com">fakeemailaddress@email.com</a>
 				<a class="info link" href="https://github.com/JWLD" target="_blank">github.com/JWLD</a>
 				<div class="info">0787 8564287</div>
-			</div>
-			<div id="switchWrap">
-				<button class="switch" onclick="changeBack(0)"></button>
-				<button class="switch" onclick="changeBack(1)"></button>
 			</div>
 		</div>
 	</body>
