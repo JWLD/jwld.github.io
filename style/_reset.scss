@@ -1,0 +1,32 @@
+html {
+	font-size: 62.5%;
+}
+
+a, body, div, h1, h2, span {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	border-radius: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+}
+
+a, body, div, span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover, button:hover {
+	cursor: pointer;
+}
+
+body {
+	background-color: #21252b;
+	min-height: 100vh;
+	flex-direction: column;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "jwld.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"sass": "./node_modules/.bin/node-sass style/main.scss style.css & npm run sass:watch",
+		"sass:watch": "./node_modules/.bin/node-sass --watch style/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWLD/JWLD.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWLD/JWLD.github.io/issues"
+  },
+  "homepage": "https://github.com/JWLD/JWLD.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
