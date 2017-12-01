@@ -64,6 +64,8 @@ body {
 .links-wrap a {
 	position: relative;
 	width: 20rem;
+	box-shadow: 0 5px 15px -5px black;
+	border-radius: 2rem;
 }
 
 .links-wrap a span {
